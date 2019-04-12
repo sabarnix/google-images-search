@@ -58,7 +58,7 @@
 
     function getTheRightMostElement(e) {
         if (e.nextSibling && window.innerWidth - e.offsetLeft > 300) {
-            return e.nextSibling;
+            return getTheRightMostElement(e.nextSibling);
         } else {
             return e;
         }
